@@ -72,14 +72,11 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 </style>
 </head>
 <body>
-<div class="banner" id="ban" hidden>Internal view. Not for clients or the public.</div>
 <header><div class="w">
-<div class="bar"><a class="logo" href="#top"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="var(--acc)" stroke-width="1.6"><path d="M13 2l9.5 5.5v11L13 24 3.5 18.5v-11z"/><path d="M13 13l9.5-5.5M13 13L3.5 7.5M13 13v11"/></svg>Marketcube</a><span style="font-size:12px;color:var(--mute);letter-spacing:.14em">ABUJA, NIGERIA</span></div>
-<div class="sw" id="sw" role="group" aria-label="Choose audience view"></div>
+<div class="bar"><a class="logo" href="index.html"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="var(--acc)" stroke-width="1.6"><path d="M13 2l9.5 5.5v11L13 24 3.5 18.5v-11z"/><path d="M13 13l9.5-5.5M13 13L3.5 7.5M13 13v11"/></svg>Marketcube</a><span style="font-size:12px;color:var(--mute);letter-spacing:.14em">ABUJA, NIGERIA</span></div>
+<div class="sw" role="group" aria-label="Site sections"><a href="index.html" style="text-decoration:none"><button aria-pressed="true">Clients</button></a> <a href="investors.html" style="text-decoration:none"><button aria-pressed="false">Investors and partners</button></a> <a href="team.html" style="text-decoration:none"><button aria-pressed="false">Team</button></a> <a href="concept.html" style="text-decoration:none"><button aria-pressed="false">Visual concept</button></a></div>
 </div></header>
-
 <main id="top">
-<!-- ===== CLIENT + CONCEPT ===== -->
 <div data-for="c">
 <div class="w hero"><div>
 <div class="eyebrow">Abuja &middot; Growth, engineered</div>
@@ -107,67 +104,15 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <form data-form novalidate><label>Your name<input name="n" autocomplete="name"></label>
 <label>Business type<select><option>Real estate developer</option><option>Automobile dealer</option><option>Other high-ticket business</option></select></label>
 <label>Best WhatsApp number<input name="p" inputmode="tel" placeholder="+234"></label><div class="err" role="alert"></div><button class="btn" type="submit">Send request</button></form>
-<div class="ok" role="status"><h3>Request received.</h3><p>This opens an email to our senior team. We reply within one working day.</p></div></div></section>
+<div class="ok" role="status"><h3>Request received.</h3><p>Demo only, nothing was sent. On the live site a senior team member would reply within one working day.</p></div></div></section>
 </div>
 
 <!-- ===== INVESTORS ===== -->
-<div data-for="i" hidden>
-<div class="w hero"><div><div class="eyebrow">For investors and partners</div>
-<h1>A growth practice built on one asset: the <em>score.</em></h1>
-<p class="lead">Marketcube serves high-ticket Abuja businesses with a validated lead score, honest measurement and a small, senior delivery model. Pre-launch. One pilot first.</p>
-<a class="btn" href="#talk">Speak with the founder</a></div>
-<div class="cube" data-cube aria-hidden="true"><svg viewBox="0 0 300 300" fill="none" stroke="var(--acc)" stroke-width="1.4"><path d="M150 20l110 64v132l-110 64-110-64V84z"/><path d="M150 150l110-66M150 150L40 84M150 150v130"/><circle cx="150" cy="150" r="7" fill="var(--acc)"/></svg></div></div>
-<section><div class="w"><div class="eyebrow">The opportunity</div><h2>Large sales, weak marketing, no honest measurement.</h2>
-<p class="sub">Developers and dealers in Abuja sell items worth ₦10m to ₦1b and more. Their marketing is brochure sites, untracked WhatsApp conversations and ads aimed at shallow events. Their agencies report platform numbers, not truth. Nobody serves them with premium, measurement-honest growth work.</p></div></section>
-<section><div class="w"><div class="eyebrow">Why it can last</div><h2>Tactics commoditise. The validated score does not.</h2>
-<div class="three" style="margin-top:28px"><div class="card"><h3>The moat</h3><p>A lead score validated against each client’s sales history and fed back as the ad target. Every engagement deepens it.</p></div>
-<div class="card"><h3>The proof</h3><p>Incrementality testing from day one, which can disprove us. That honesty is the brand.</p></div>
-<div class="card"><h3>The leverage</h3><p>Documented checklists and an agent fleet supervised by senior people keep delivery consistent and lean.</p></div></div></div></section>
-<section><div class="w"><div class="eyebrow">Business model</div><h2>Premium retainers, few clients, high revenue.</h2>
-<div class="three" style="margin-top:28px"><div class="card"><div class="tag">Entry</div><h3>Diagnostic Sprint</h3><p>Fixed fee. Low-risk way to prove the method.</p></div>
-<div class="card feat"><div class="tag">Core</div><h3>Growth Retainer</h3><p>Monthly in advance, plus a component tied to measured lift.</p></div>
-<div class="card"><div class="tag">Top</div><h3>Embedded Practice</h3><p>Retainer plus revenue share. One at a time while the team is small.</p></div></div></div></section>
-<section><div class="w"><div class="eyebrow">Roadmap</div><h2>Disciplined sequencing. Proof before scale.</h2><p class="sub">Select a phase.</p>
-<div class="tabs" role="tablist" data-tabs="r"></div><div class="card panel" data-panel="r" aria-live="polite"></div></div></section>
-<section class="cap"><div class="w"><h2>What we have chosen not to do yet.</h2><p>No custom software before pilots prove the model. No hires before two clients fund the salary. No second city before Abuja produces three references. No promised results, only promised measurement.</p></div></section>
-<section id="talk"><div class="w"><div class="eyebrow">Next step</div><h2>Start a conversation.</h2><p class="sub">Partnerships and investment discussions are handled by the founder directly.</p>
-<form data-form novalidate><label>Your name<input name="n" autocomplete="name"></label>
-<label>Interest<select><option>Investment</option><option>Strategic partnership</option><option>Referral partner</option></select></label>
-<label>Best phone number<input name="p" inputmode="tel" placeholder="+234"></label><div class="err" role="alert"></div><button class="btn" type="submit">Request a call</button></form>
-<div class="ok" role="status"><h3>Request noted.</h3><p>This opens an email to the founder.</p></div></div></section>
-</div>
 
-<!-- ===== TEAM ===== -->
-<div data-for="t" hidden>
-<div class="w hero"><div><div class="eyebrow">Team workspace</div>
-<h1>How we run every client, <em>the same way.</em></h1>
-<p class="lead">The delivery pipeline, the hard boundaries and the pre-launch checklist, in one place. Any specialist or agent should be able to run a checklist cold.</p></div>
-<div class="card"><div class="tag">Pre-launch progress</div><div class="num" id="pct">40%</div><div class="prog"><i id="bar"></i></div><p style="font-size:14px;color:var(--mute);margin:0">Tick items below to update.</p></div></div>
-<section><div class="w"><div class="eyebrow">Delivery pipeline</div><h2>Six stages per client.</h2><p class="sub">Open a stage for its output.</p>
-<details open><summary>1. Intake <span>Week 0</span></summary><p>Funnel audit, tracking plan, data access. Output: instrumentation spec.</p></details>
-<details><summary>2. Score build <span>Weeks 1 to 3</span></summary><p>Capture pipeline (site events, WhatsApp, call and email transcripts, financing signals), intent analysis, correlation with sales history, validation. Output: lead score v1.</p></details>
-<details><summary>3. Target swap <span>Week 3</span></summary><p>The score becomes the ad platform’s conversion event. Thresholds tuned for about 50 qualified events a week. Output: live loop.</p></details>
-<details><summary>4. Growth layer <span>Ongoing</span></summary><p>Curriculum modules that fit the client, creative pipelines, programmatic SEO, behavioural email.</p></details>
-<details><summary>5. Measure <span>Monthly</span></summary><p>Incrementality check (geo holdouts or MMM-lite). Honest report, including negatives. Every client figure must be reproducible from raw events.</p></details>
-<details><summary>6. Sales layer <span>Ongoing</span></summary><p>Belfort funnel training, A/B/C bucket discipline, call review sampling.</p></details></div></section>
-<section><div class="w"><div class="eyebrow">Hard boundaries</div><h2>Five rules, no exceptions.</h2>
-<div class="two" style="margin-top:24px"><div class="card"><h3>Never</h3><ul class="l"><li>Publish client data, ledgers or names without written consent and owner approval</li><li>Spend or commit client money</li><li>Sign contracts, send priced proposals or make job offers</li><li>Promise results</li></ul></div>
-<div class="card"><h3>Always</h3><ul class="l"><li>Promise measurement and honest reporting</li><li>Verify any public claim about a competitor</li><li>Route contracts and pricing changes to a Chief of Strategy verdict first</li><li>Keep books private; claims verifiable</li></ul></div></div></div></section>
-<section><div class="w"><div class="eyebrow">Pre-launch checklist</div><h2>Where we stand.</h2><div id="ck" style="max-width:640px;margin-top:20px"></div></div></section>
-</div>
 </main>
 <footer><div class="w"><span>Marketcube. Growth, engineered.</span><span>Abuja, Nigeria</span></div></footer>
-
 <script>
 const $=(s,r=document)=>[...r.querySelectorAll(s)];
-const views=[["client","Clients","c"],["investors","Investors and partners","i"],["team","Team","t"],["concept","Visual concept","c"]];
-const sw=document.getElementById('sw');
-function setView(k){const v=views.find(x=>x[0]===k);
-$('[data-for]').forEach(e=>e.hidden=e.dataset.for!==v[2]);
-$('button',sw).forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k));
-document.documentElement.dataset.skin=k==='concept'?'bold':'';
-document.getElementById('ban').hidden=k!=='team';scrollTo({top:0})}
-views.forEach(v=>{const b=document.createElement('button');b.textContent=v[1];b.dataset.k=v[0];b.onclick=()=>setView(v[0]);sw.appendChild(b)});
 const T={m:[["Capture","Every quote view, call, message, visit and financing signal from your site and WhatsApp is recorded in a private ledger that belongs to your engagement."],["Score","We read intent in those signals and test it against your sales history. One score combines ability to afford and quality of engagement."],["Swap","The score becomes the conversion event your ad platform optimises for, so ads start hunting buyers instead of clicks."],["Prove","Each month a holdout test and an honest report, including what did not work. Every figure traces to raw events."]],
 r:[["Pilot","One client, at cost, for proof. The delivery checklist is proven on real work and an honest ledger is kept."],["Case study","With written consent and honest numbers, the pilot becomes the sales asset for clients two to four."],["Abuja depth","Three references in Abuja before any second geography. Hire a senior growth lead once two clients fund the salary."],["Phase 2","Score-as-a-service, considered only after the pilots prove the method."]]};
 $('[data-tabs]').forEach(t=>{const k=t.dataset.tabs,p=document.querySelector('[data-panel="'+k+'"]');
@@ -176,14 +121,13 @@ T[k].forEach((s,i)=>{const b=document.createElement('button');b.role='tab';b.tex
 $('[data-form]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const er=$('.err',f)[0];
 if(f.n.value.trim().length<2){er.textContent='Please enter your name.';return}
 if(f.p.value.replace(/\D/g,'').length<10){er.textContent='Please enter a valid phone number.';return}
-const subj=encodeURIComponent('Marketcube '+f.closest('section').querySelector('h2').textContent);const body=encodeURIComponent('Name: '+f.n.value+'\nPhone: '+f.p.value);location.href='mailto:tobiobembeofficial@gmail.com?subject='+subj+'&body='+body;f.style.display='none';f.nextElementSibling.style.display='block'}));
+f.style.display='none';f.nextElementSibling.style.display='block'}));
 const items=[["Project documents and role briefs complete",1],["Positioning, pricing, pitch and target framework drafted",1],["Entity decided with counsel",0],["First pilot client signed (at cost)",0],["Delivery checklist proven on the pilot",0]];
-const ck=document.getElementById('ck');
+const ck=document.getElementById('ck');if(ck){
 items.forEach(([t,d])=>{const l=document.createElement('label');l.className='chk';l.innerHTML='<input type="checkbox"'+(d?' checked':'')+'><span>'+t+'</span>';l.firstChild.onchange=upd;ck.appendChild(l)});
 function upd(){const n=$('input',ck).filter(i=>i.checked).length,p=Math.round(n/items.length*100);
-document.getElementById('pct').textContent=p+'%';document.getElementById('bar').style.width=p+'%'}upd();
+document.getElementById('pct').textContent=p+'%';document.getElementById('bar').style.width=p+'%'}upd();}
 addEventListener('mousemove',e=>{const x=(e.clientX/innerWidth-.5)*14,y=(e.clientY/innerHeight-.5)*-14;$('[data-cube] svg').forEach(s=>s.style.transform='rotateY('+x+'deg) rotateX('+y+'deg)')});
-setView('client');
 </script>
 </body>
 </html>

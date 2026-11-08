@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Marketcube | Growth, engineered</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4efe6;--bg2:#ebe4d6;--ink:#14211b;--mute:#55605a;--line:#d6cdbb;--acc:#a8531e;--card:#fbf8f2;--on-acc:#fff;--r:3px;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1713;--bg2:#12201a;--ink:#efe8da;--mute:#9aa79f;--line:#26362e;--acc:#d9915a;--card:#142320;--on-acc:#0d1713}}
+:root[data-theme="dark"]{--bg:#0d1713;--bg2:#12201a;--ink:#efe8da;--mute:#9aa79f;--line:#26362e;--acc:#d9915a;--card:#142320;--on-acc:#0d1713}
+:root[data-skin="bold"],:root[data-skin="bold"]:not([data-theme="light"]){--bg:#150d33;--bg2:#1d1247;--ink:#f6f2ff;--mute:#b9afdc;--line:#372a6e;--acc:#c8ff3d;--card:#1d1247;--on-acc:#150d33;--r:16px}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:120px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 Inter,system-ui,sans-serif;transition:background .3s}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:30}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:400;line-height:1.1;margin:0}
+[data-skin="bold"] h1,[data-skin="bold"] h2{font-weight:600;letter-spacing:-.03em}
+[data-skin="bold"] h1{font-size:clamp(44px,8vw,92px)}
+.w{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--bg);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:60px}
+.logo{font-family:Fraunces,Georgia,serif;font-size:22px;display:flex;gap:10px;align-items:center;color:var(--ink);text-decoration:none}
+.sw{display:flex;gap:6px;overflow-x:auto;padding:0 0 10px}
+.sw button{flex:none;background:transparent;color:var(--mute);border:1px solid var(--line);padding:7px 14px;border-radius:99px;cursor:pointer;font:500 13px Inter,sans-serif}
+.sw button[aria-pressed="true"]{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.btn{display:inline-block;background:var(--acc);color:var(--on-acc);padding:13px 24px;border-radius:var(--r);font-weight:600;font-size:15px;text-decoration:none;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{filter:brightness(1.1)}
+.hero{padding:80px 0 64px;display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center}
+.eyebrow{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--acc);font-weight:600;margin-bottom:18px}
+h1{font-size:clamp(36px,5.5vw,62px);letter-spacing:-.02em}
+h1 em{color:var(--acc);font-style:italic}
+.lead{font-size:19px;color:var(--mute);max-width:540px;margin:22px 0 30px}
+.cube{max-width:300px;margin:auto}.cube svg{width:100%;height:auto;transition:transform .2s}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(26px,4vw,40px);margin-bottom:14px;max-width:660px}
+.sub{color:var(--mute);max-width:620px;margin:0 0 32px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.three{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);padding:26px;border-radius:var(--r)}
+.card h3{font-size:21px;margin-bottom:8px}.card p{margin:0;color:var(--mute);font-size:15px}
+.tag{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:10px}
+.num{font-family:Fraunces,Georgia,serif;color:var(--acc);font-size:32px;margin-bottom:4px}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.tabs button{background:transparent;color:var(--mute);border:1px solid var(--line);padding:10px 16px;border-radius:var(--r);cursor:pointer;font:500 14px Inter,sans-serif}
+.tabs button[aria-selected="true"]{background:var(--acc);border-color:var(--acc);color:var(--on-acc)}
+.panel h3{font-size:26px;margin-bottom:10px}.panel p{max-width:620px}
+ul.l{padding-left:18px;margin:12px 0 0;color:var(--mute);font-size:14px}
+.feat{border-color:var(--acc)}
+.fee{margin-top:16px;padding-top:12px;border-top:1px solid var(--line);font-size:13px}
+.cap{background:var(--bg2);text-align:center}.cap h2,.cap p{margin-left:auto;margin-right:auto}.cap p{color:var(--mute);max-width:560px}
+form{display:grid;gap:14px;max-width:560px}
+label{font-size:13px;color:var(--mute);display:grid;gap:6px}
+input,select{background:var(--card);color:var(--ink);border:1px solid var(--line);padding:12px;border-radius:var(--r);font:inherit}
+input:focus,select:focus,summary:focus-visible{outline:2px solid var(--acc);outline-offset:1px}
+.err{color:var(--acc);font-size:13px;min-height:18px}
+.ok{display:none;border:1px solid var(--acc);padding:26px;border-radius:var(--r);max-width:560px;background:var(--card)}
+.ok h3{font-size:24px;margin-bottom:6px}.ok p{margin:0;color:var(--mute)}
+.banner{background:var(--acc);color:var(--on-acc);text-align:center;font-size:13px;font-weight:600;padding:8px}
+details{background:var(--card);border:1px solid var(--line);border-radius:var(--r);margin-bottom:10px}
+summary{cursor:pointer;padding:16px 20px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary span{color:var(--mute);font-weight:400;font-size:13px}
+details p{margin:0;padding:0 20px 18px;color:var(--mute);font-size:15px}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line);cursor:pointer}
+.chk input{margin-top:5px;accent-color:var(--acc)}
+.prog{height:8px;background:var(--line);border-radius:99px;overflow:hidden;margin:6px 0 18px}
+.prog i{display:block;height:100%;background:var(--acc);width:0;transition:width .3s}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:13px}
+footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:760px){.hero,.two,.three{grid-template-columns:1fr}.hero{padding:48px 0}.cube{max-width:200px}}
+</style>
+</head>
+<body>
+<div class="banner" id="ban" hidden>Internal view. Not for clients or the public.</div>
+<header><div class="w">
+<div class="bar"><a class="logo" href="#top"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="var(--acc)" stroke-width="1.6"><path d="M13 2l9.5 5.5v11L13 24 3.5 18.5v-11z"/><path d="M13 13l9.5-5.5M13 13L3.5 7.5M13 13v11"/></svg>Marketcube</a><span style="font-size:12px;color:var(--mute)">Mock site</span></div>
+<div class="sw" id="sw" role="group" aria-label="Choose audience view"></div>
+</div></header>
+
+<main id="top">
+<!-- ===== CLIENT + CONCEPT ===== -->
+<div data-for="c">
+<div class="w hero"><div>
+<div class="eyebrow">Abuja &middot; Growth, engineered</div>
+<h1>Your ads cannot tell a buyer from a <em>browser.</em></h1>
+<p class="lead">We build the scoring system that teaches your ad platforms who a real buyer is, then we show you, with measurement you can audit, what worked and what did not.</p>
+<a class="btn" href="#start">Request a diagnostic</a></div>
+<div class="cube" data-cube aria-hidden="true"><svg viewBox="0 0 300 300" fill="none" stroke="var(--acc)" stroke-width="1.4"><path d="M150 20l110 64v132l-110 64-110-64V84z"/><path d="M150 150l110-66M150 150L40 84M150 150v130"/><path d="M95 52l110 64M205 52L95 116" opacity=".35"/><circle cx="150" cy="150" r="7" fill="var(--acc)"/></svg></div></div>
+<section><div class="w"><div class="eyebrow">The problem</div><h2>Ten-million-naira sales, steered by shallow signals.</h2>
+<p class="sub">Most ads optimise for form fills because that is what they can count. Your real buyers behave differently, and the algorithm never learns it.</p>
+<div class="two"><div class="card"><div class="tag">What most agencies report</div><h3>Platform numbers</h3><p>Clicks, leads and cost per lead, reported by the same platform that sells the ads.</p></div>
+<div class="card"><div class="tag">What we report</div><h3>What your money did</h3><p>Measured against your own sales history, including the months where we added nothing.</p></div></div></div></section>
+<section><div class="w"><div class="eyebrow">The method</div><h2>One score. One loop. Measured honestly.</h2><p class="sub">Select a step to see what happens.</p>
+<div class="tabs" role="tablist" data-tabs="m"></div><div class="card panel" data-panel="m" aria-live="polite"></div></div></section>
+<section><div class="w"><div class="eyebrow">Why Marketcube</div><h2>Three things we will not compromise.</h2>
+<div class="three"><div class="card"><div class="num">01</div><h3>The score</h3><p>A validated behavioural lead score, fed back as the ad platform’s conversion target.</p></div>
+<div class="card"><div class="num">02</div><h3>The proof</h3><p>Incrementality testing from day one. If our work is not adding sales, you hear it from us first.</p></div>
+<div class="card"><div class="num">03</div><h3>The system</h3><p>Documented checklists, supervised by senior people. Consistency is structural, not heroic.</p></div></div></div></section>
+<section><div class="w"><div class="eyebrow">Engagements</div><h2>Start small. Go deep only if the read supports it.</h2>
+<div class="three" style="margin-top:28px">
+<div class="card"><div class="tag">Step one</div><h3>Diagnostic Sprint</h3><p>Two to three weeks on your real numbers.</p><ul class="l"><li>Funnel audit and tracking plan</li><li>Score feasibility read</li><li>One honest written report</li></ul><div class="fee">Fixed fee, agreed before we begin.</div></div>
+<div class="card feat"><div class="tag">The core</div><h3>Growth Retainer</h3><p>Quarterly and renewable. The full loop.</p><ul class="l"><li>Score build and target swap</li><li>Monthly incrementality read</li><li>Sales team funnel training</li></ul><div class="fee">Monthly retainer plus a component tied to measured lift.</div></div>
+<div class="card"><div class="tag">For the largest</div><h3>Embedded Practice</h3><p>We act as your growth department.</p><ul class="l"><li>Deeper team integration</li><li>Retainer plus revenue share</li><li>One at a time</li></ul><div class="fee">By conversation.</div></div></div></div></section>
+<section class="cap"><div class="w"><h2>A limited number of engagements each quarter.</h2><p>The score build is senior work, so capacity is a fact, not a tactic. We select our clients. We do not chase.</p></div></section>
+<section id="start"><div class="w"><div class="eyebrow">First step</div><h2>Request a two-week diagnostic.</h2><p class="sub">If the read says a score will not move your numbers, we will say so and part as friends.</p>
+<form data-form novalidate><label>Your name<input name="n" autocomplete="name"></label>
+<label>Business type<select><option>Real estate developer</option><option>Automobile dealer</option><option>Other high-ticket business</option></select></label>
+<label>Best WhatsApp number<input name="p" inputmode="tel" placeholder="+234"></label><div class="err" role="alert"></div><button class="btn" type="submit">Send request</button></form>
+<div class="ok" role="status"><h3>Request received.</h3><p>Demo only, nothing was sent. On the live site a senior team member would reply within one working day.</p></div></div></section>
+</div>
+
+<!-- ===== INVESTORS ===== -->
+<div data-for="i" hidden>
+<div class="w hero"><div><div class="eyebrow">For investors and partners</div>
+<h1>A growth practice built on one asset: the <em>score.</em></h1>
+<p class="lead">Marketcube serves high-ticket Abuja businesses with a validated lead score, honest measurement and a small, senior delivery model. Pre-launch. One pilot first.</p>
+<a class="btn" href="#talk">Speak with the founder</a></div>
+<div class="cube" data-cube aria-hidden="true"><svg viewBox="0 0 300 300" fill="none" stroke="var(--acc)" stroke-width="1.4"><path d="M150 20l110 64v132l-110 64-110-64V84z"/><path d="M150 150l110-66M150 150L40 84M150 150v130"/><circle cx="150" cy="150" r="7" fill="var(--acc)"/></svg></div></div>
+<section><div class="w"><div class="eyebrow">The opportunity</div><h2>Large sales, weak marketing, no honest measurement.</h2>
+<p class="sub">Developers and dealers in Abuja sell items worth ₦10m to ₦1b and more. Their marketing is brochure sites, untracked WhatsApp conversations and ads aimed at shallow events. Their agencies report platform numbers, not truth. Nobody serves them with premium, measurement-honest growth work.</p></div></section>
+<section><div class="w"><div class="eyebrow">Why it can last</div><h2>Tactics commoditise. The validated score does not.</h2>
+<div class="three" style="margin-top:28px"><div class="card"><h3>The moat</h3><p>A lead score validated against each client’s sales history and fed back as the ad target. Every engagement deepens it.</p></div>
+<div class="card"><h3>The proof</h3><p>Incrementality testing from day one, which can disprove us. That honesty is the brand.</p></div>
+<div class="card"><h3>The leverage</h3><p>Documented checklists and an agent fleet supervised by senior people keep delivery consistent and lean.</p></div></div></div></section>
+<section><div class="w"><div class="eyebrow">Business model</div><h2>Premium retainers, few clients, high revenue.</h2>
+<div class="three" style="margin-top:28px"><div class="card"><div class="tag">Entry</div><h3>Diagnostic Sprint</h3><p>Fixed fee. Low-risk way to prove the method.</p></div>
+<div class="card feat"><div class="tag">Core</div><h3>Growth Retainer</h3><p>Monthly in advance, plus a component tied to measured lift.</p></div>
+<div class="card"><div class="tag">Top</div><h3>Embedded Practice</h3><p>Retainer plus revenue share. One at a time while the team is small.</p></div></div></div></section>
+<section><div class="w"><div class="eyebrow">Roadmap</div><h2>Disciplined sequencing. Proof before scale.</h2><p class="sub">Select a phase.</p>
+<div class="tabs" role="tablist" data-tabs="r"></div><div class="card panel" data-panel="r" aria-live="polite"></div></div></section>
+<section class="cap"><div class="w"><h2>What we have chosen not to do yet.</h2><p>No custom software before pilots prove the model. No hires before two clients fund the salary. No second city before Abuja produces three references. No promised results, only promised measurement.</p></div></section>
+<section id="talk"><div class="w"><div class="eyebrow">Next step</div><h2>Start a conversation.</h2><p class="sub">Partnerships and investment discussions are handled by the founder directly.</p>
+<form data-form novalidate><label>Your name<input name="n" autocomplete="name"></label>
+<label>Interest<select><option>Investment</option><option>Strategic partnership</option><option>Referral partner</option></select></label>
+<label>Best phone number<input name="p" inputmode="tel" placeholder="+234"></label><div class="err" role="alert"></div><button class="btn" type="submit">Request a call</button></form>
+<div class="ok" role="status"><h3>Request noted.</h3><p>Demo only, nothing was sent.</p></div></div></section>
+</div>
+
+<!-- ===== TEAM ===== -->
+<div data-for="t" hidden>
+<div class="w hero"><div><div class="eyebrow">Team workspace</div>
+<h1>How we run every client, <em>the same way.</em></h1>
+<p class="lead">The delivery pipeline, the hard boundaries and the pre-launch checklist, in one place. Any specialist or agent should be able to run a checklist cold.</p></div>
+<div class="card"><div class="tag">Pre-launch progress</div><div class="num" id="pct">40%</div><div class="prog"><i id="bar"></i></div><p style="font-size:14px;color:var(--mute);margin:0">Tick items below to update.</p></div></div>
+<section><div class="w"><div class="eyebrow">Delivery pipeline</div><h2>Six stages per client.</h2><p class="sub">Open a stage for its output.</p>
+<details open><summary>1. Intake <span>Week 0</span></summary><p>Funnel audit, tracking plan, data access. Output: instrumentation spec.</p></details>
+<details><summary>2. Score build <span>Weeks 1 to 3</span></summary><p>Capture pipeline (site events, WhatsApp, call and email transcripts, financing signals), intent analysis, correlation with sales history, validation. Output: lead score v1.</p></details>
+<details><summary>3. Target swap <span>Week 3</span></summary><p>The score becomes the ad platform’s conversion event. Thresholds tuned for about 50 qualified events a week. Output: live loop.</p></details>
+<details><summary>4. Growth layer <span>Ongoing</span></summary><p>Curriculum modules that fit the client, creative pipelines, programmatic SEO, behavioural email.</p></details>
+<details><summary>5. Measure <span>Monthly</span></summary><p>Incrementality check (geo holdouts or MMM-lite). Honest report, including negatives. Every client figure must be reproducible from raw events.</p></details>
+<details><summary>6. Sales layer <span>Ongoing</span></summary><p>Belfort funnel training, A/B/C bucket discipline, call review sampling.</p></details></div></section>
+<section><div class="w"><div class="eyebrow">Hard boundaries</div><h2>Five rules, no exceptions.</h2>
+<div class="two" style="margin-top:24px"><div class="card"><h3>Never</h3><ul class="l"><li>Publish client data, ledgers or names without written consent and owner approval</li><li>Spend or commit client money</li><li>Sign contracts, send priced proposals or make job offers</li><li>Promise results</li></ul></div>
+<div class="card"><h3>Always</h3><ul class="l"><li>Promise measurement and honest reporting</li><li>Verify any public claim about a competitor</li><li>Route contracts and pricing changes to a Chief of Strategy verdict first</li><li>Keep books private; claims verifiable</li></ul></div></div></div></section>
+<section><div class="w"><div class="eyebrow">Pre-launch checklist</div><h2>Where we stand.</h2><div id="ck" style="max-width:640px;margin-top:20px"></div></div></section>
+</div>
+</main>
+<footer><div class="w"><span>Marketcube. Growth, engineered.</span><span>Abuja, Nigeria</span></div></footer>
+
+<script>
+const $=(s,r=document)=>[...r.querySelectorAll(s)];
+const views=[["client","Clients","c"],["investors","Investors and partners","i"],["team","Team","t"],["concept","Visual concept","c"]];
+const sw=document.getElementById('sw');
+function setView(k){const v=views.find(x=>x[0]===k);
+$('[data-for]').forEach(e=>e.hidden=e.dataset.for!==v[2]);
+$('button',sw).forEach(b=>b.setAttribute('aria-pressed',b.dataset.k===k));
+document.documentElement.dataset.skin=k==='concept'?'bold':'';
+document.getElementById('ban').hidden=k!=='team';scrollTo({top:0})}
+views.forEach(v=>{const b=document.createElement('button');b.textContent=v[1];b.dataset.k=v[0];b.onclick=()=>setView(v[0]);sw.appendChild(b)});
+const T={m:[["Capture","Every quote view, call, message, visit and financing signal from your site and WhatsApp is recorded in a private ledger that belongs to your engagement."],["Score","We read intent in those signals and test it against your sales history. One score combines ability to afford and quality of engagement."],["Swap","The score becomes the conversion event your ad platform optimises for, so ads start hunting buyers instead of clicks."],["Prove","Each month a holdout test and an honest report, including what did not work. Every figure traces to raw events."]],
+r:[["Pilot","One client, at cost, for proof. The delivery checklist is proven on real work and an honest ledger is kept."],["Case study","With written consent and honest numbers, the pilot becomes the sales asset for clients two to four."],["Abuja depth","Three references in Abuja before any second geography. Hire a senior growth lead once two clients fund the salary."],["Phase 2","Score-as-a-service, considered only after the pilots prove the method."]]};
+$('[data-tabs]').forEach(t=>{const k=t.dataset.tabs,p=document.querySelector('[data-panel="'+k+'"]');
+const show=i=>{$('button',t).forEach((b,j)=>b.setAttribute('aria-selected',j===i));p.innerHTML='<div class="tag">Step '+(i+1)+' of '+T[k].length+'</div><h3>'+T[k][i][0]+'</h3><p>'+T[k][i][1]+'</p>'};
+T[k].forEach((s,i)=>{const b=document.createElement('button');b.role='tab';b.textContent=(i+1)+'. '+s[0];b.onclick=()=>show(i);t.appendChild(b)});show(0)});
+$('[data-form]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const er=$('.err',f)[0];
+if(f.n.value.trim().length<2){er.textContent='Please enter your name.';return}
+if(f.p.value.replace(/\D/g,'').length<10){er.textContent='Please enter a valid phone number.';return}
+f.style.display='none';f.nextElementSibling.style.display='block'}));
+const items=[["Project documents and role briefs complete",1],["Positioning, pricing, pitch and target framework drafted",1],["Entity decided with counsel",0],["First pilot client signed (at cost)",0],["Delivery checklist proven on the pilot",0]];
+const ck=document.getElementById('ck');
+items.forEach(([t,d])=>{const l=document.createElement('label');l.className='chk';l.innerHTML='<input type="checkbox"'+(d?' checked':'')+'><span>'+t+'</span>';l.firstChild.onchange=upd;ck.appendChild(l)});
+function upd(){const n=$('input',ck).filter(i=>i.checked).length,p=Math.round(n/items.length*100);
+document.getElementById('pct').textContent=p+'%';document.getElementById('bar').style.width=p+'%'}upd();
+addEventListener('mousemove',e=>{const x=(e.clientX/innerWidth-.5)*14,y=(e.clientY/innerHeight-.5)*-14;$('[data-cube] svg').forEach(s=>s.style.transform='rotateY('+x+'deg) rotateX('+y+'deg)')});
+setView('client');
+</script>
+</body>
+</html>
