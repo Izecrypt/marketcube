@@ -40,9 +40,6 @@ PAGES = [
 ]
 
 for fname, body, skin, active in PAGES:
-    links = " ".join(
-        f'<a href="{f}" style="text-decoration:none"><button aria-pressed="{str(a == active).lower()}">{a}</button></a>'
-        for f, _, _, a in PAGES)
     page = f"""<!DOCTYPE html>
 <html lang="en"{skin}>
 <head>
@@ -55,7 +52,6 @@ for fname, body, skin, active in PAGES:
 <body>
 <header><div class="w">
 <div class="bar"><a class="logo" href="index.html"><svg width="26" height="26" viewBox="0 0 26 26" fill="none" stroke="var(--acc)" stroke-width="1.6"><path d="M13 2l9.5 5.5v11L13 24 3.5 18.5v-11z"/><path d="M13 13l9.5-5.5M13 13L3.5 7.5M13 13v11"/></svg>Marketcube</a><span style="font-size:12px;color:var(--mute);letter-spacing:.14em">ABUJA, NIGERIA</span></div>
-<div class="sw" role="group" aria-label="Site sections">{links}</div>
 </div></header>
 <main id="top">
 {body}
