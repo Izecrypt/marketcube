@@ -109,7 +109,7 @@ footer .w{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
 <form data-form novalidate><label>Your name<input name="n" autocomplete="name"></label>
 <label>Business type<select><option>Real estate developer</option><option>Automobile dealer</option><option>Other high-ticket business</option></select></label>
 <label>Best WhatsApp number<input name="p" inputmode="tel" placeholder="+234"></label><div class="err" role="alert"></div><button class="btn" type="submit">Send request</button></form>
-<div class="ok" role="status"><h3>Request received.</h3><p>Demo only, nothing was sent. On the live site a senior team member would reply within one working day.</p></div></div></section>
+<div class="ok" role="status"><h3>Request received.</h3><p>This opens an email to our senior team. We reply within one working day.</p></div></div></section>
 </div>
 
 <!-- ===== INVESTORS ===== -->
@@ -126,7 +126,7 @@ T[k].forEach((s,i)=>{const b=document.createElement('button');b.role='tab';b.tex
 $('[data-form]').forEach(f=>f.addEventListener('submit',e=>{e.preventDefault();const er=$('.err',f)[0];
 if(f.n.value.trim().length<2){er.textContent='Please enter your name.';return}
 if(f.p.value.replace(/\D/g,'').length<10){er.textContent='Please enter a valid phone number.';return}
-f.style.display='none';f.nextElementSibling.style.display='block'}));
+const subj=encodeURIComponent('Marketcube '+f.closest('section').querySelector('h2').textContent);const body=encodeURIComponent('Name: '+f.n.value+'\nPhone: '+f.p.value);location.href='mailto:tobiobembeofficial@gmail.com?subject='+subj+'&body='+body;f.style.display='none';f.nextElementSibling.style.display='block'}));
 const items=[["Project documents and role briefs complete",1],["Positioning, pricing, pitch and target framework drafted",1],["Entity decided with counsel",0],["First pilot client signed (at cost)",0],["Delivery checklist proven on the pilot",0]];
 const ck=document.getElementById('ck');if(ck){
 items.forEach(([t,d])=>{const l=document.createElement('label');l.className='chk';l.innerHTML='<input type="checkbox"'+(d?' checked':'')+'><span>'+t+'</span>';l.firstChild.onchange=upd;ck.appendChild(l)});
