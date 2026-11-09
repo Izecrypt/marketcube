@@ -46,6 +46,12 @@ for fname, body, skin, active in PAGES:
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Marketcube | Growth, engineered</title>
+<link rel="icon" type="image/svg+xml" href="/cube.svg">
+<meta property="og:title" content="Marketcube — growth, engineered">
+<meta property="og:description" content="The scoring system that teaches your ad platforms who a real buyer is, with measurement you can audit. Abuja.">
+<meta property="og:image" content="https://marketcube.trenchesnetwork.xyz/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>{css}</style>
 </head>
